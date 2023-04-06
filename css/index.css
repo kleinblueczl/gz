@@ -1,0 +1,1179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: calc(100vw/7.2);
+}
+
+body {
+    overflow: hidden;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.war {
+    height: 100%;
+    position: relative;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/bg-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+    background-position-y: 100%;
+}
+
+.bgMove {
+    animation: bgMove 8000ms linear forwards;
+}
+
+@keyframes bgMove {
+    from {
+        background-position-y: 100%;
+    }
+
+    to {
+        background-position-y: 0;
+    }
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.time_one {
+    font-size: .4rem;
+    color: #ebf3f9;
+    font-weight: lighter;
+    letter-spacing: .25rem;
+    position: absolute;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.withe {
+    width: 1rem;
+    height: 0.01rem;
+    background-color: #ffffff;
+    margin-right: .41rem;
+}
+
+.time_one .withe:last-child {
+    margin-left: .27rem;
+    margin-right: 0;
+}
+
+
+.title {
+    font-weight: lighter;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    color: #ffffff;
+    position: absolute;
+    top: 1.67rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text_one {
+    font-size: .4rem;
+    line-height: 1;
+    color: #0c8f8d;
+    position: absolute;
+    bottom: 4.9rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    opacity: 0;
+    animation: one 2500ms 1500ms linear forwards;
+}
+
+.text_one>p:first-child {
+    margin-bottom: .33rem;
+}
+
+.arrowhead {
+    width: .64rem;
+    height: 1.53rem;
+    position: absolute;
+    bottom: 2.24rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    animation: one 2500ms 1500ms linear forwards;
+}
+
+.arrowhead img {
+    display: block;
+    width: .64rem;
+    height: .33rem;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 500ms;
+    /* animation: one 2500ms 1500ms linear forwards */
+}
+
+.arrowheadmove {
+    animation: arrowheadmove 3000ms infinite;
+}
+
+@keyframes arrowheadmove {
+    0% {
+        opacity: .5;
+    }
+
+    33.3% {
+        opacity: .8;
+    }
+
+    66.6% {
+        opacity: .1;
+    }
+}
+
+.aperture {
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+.aperture-1 {
+    left: 1.85rem;
+    bottom: 4.2rem;
+}
+
+.aperture-2 {
+    left: 4.32rem;
+    bottom: 6.2rem;
+}
+
+.aperture-3 {
+    left: 5.82rem;
+    bottom: 3.63rem;
+}
+
+.aperture-4 {
+    left: 3.6rem;
+    bottom: 3.2rem;
+}
+
+.aperture_1 {
+    display: inline-block;
+    width: .4rem;
+    height: .4rem;
+    border: .1rem solid rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    position: absolute;
+    animation: apertureMove 700ms infinite alternate;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes apertureMove {
+    0% {
+        width: .2rem;
+        height: .2rem;
+        transform: translate(-50%, -50%) scale(.5);
+        border: .1rem solid rgba(255, 255, 255, 0.8);
+
+    }
+
+    50% {
+        width: .5rem;
+        height: .5rem;
+        transform: translate(-50%, -50%) scale(1.1);
+        border: .06rem solid rgba(255, 255, 255, 0.6);
+    }
+
+    100% {
+        width: .8rem;
+        height: .8rem;
+        transform: translate(-50%, -50%) scale(1.2);
+        border: 0.04rem solid rgba(255, 255, 255, 0.4);
+    }
+}
+
+.top_phone {
+    width: 100%;
+    height: 4.65rem;
+    background-image: url(../image/top.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    left: 0;
+    top: .41rem;
+    color: #ffffff;
+    opacity: 0;
+    animation: top_phone 3000ms 1000ms linear forwards;
+}
+
+@keyframes top_phone {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.scenery {
+    animation: top_phone 2000ms linear;
+}
+
+
+.top_phone2 {
+    width: 0.76rem;
+    height: 0.76rem;
+    position: absolute;
+    left: 2.03rem;
+    top: 1.41rem;
+}
+
+
+.time {
+    position: absolute;
+    top: .7rem;
+    left: 1.2rem;
+    font-size: .3rem;
+    font-weight: bold;
+}
+
+.year {
+    font-size: .4rem;
+}
+
+.text {
+    width: 4.65rem;
+    font-size: .24rem;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.twotitle {
+    font-size: .3rem;
+    left: 1.2rem;
+    position: absolute;
+    top: 1.1rem;
+    font-weight: bold;
+}
+
+.bill {
+    font-size: .2rem;
+    position: absolute;
+    top: 2.65rem;
+    left: 3.6rem;
+    color: #f7fafc;
+}
+
+.mountain {
+    width: 100%;
+    height: 1.31rem;
+    position: absolute;
+    left: 0;
+    bottom: 6.64rem;
+}
+
+.bottom_clouds {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.top_phone>.one {
+    opacity: 0;
+    animation: one 3000ms 1000ms linear forwards;
+}
+
+
+@keyframes one {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 对话框 */
+.dialogBox {
+    width: 1.86rem;
+    height: 1.18rem;
+    background-image: url(../image/q.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 999;
+    left: 3.6rem;
+    bottom: 1rem;
+    padding: .15rem;
+    box-sizing: border-box;
+    font-size: .24rem;
+    display: none;
+}
+
+.twotext {
+    display: none;
+}
+
+/* 鸽子 */
+.dove {
+    width: .7rem;
+    height: 1rem;
+    position: absolute;
+    left: 3.29rem;
+    bottom: .22rem;
+    z-index: 999;
+
+}
+
+/* 鸽子上升 */
+.rise {
+    animation: dove 2500ms linear 1 forwards;
+}
+
+/* 第一个梯子 */
+.ladder_01 {
+    width: 2rem;
+    height: .58rem;
+    position: absolute;
+    left: 2.59rem;
+    bottom: 0.005rem;
+    z-index: 45;
+    animation: dove 2500ms linear forwards;
+}
+
+/* 鸽子和第一块梯子上升动画 */
+@keyframes dove {
+    from {
+        transform: translateY(2rem);
+    }
+
+    to {
+        transform: translateY(0rem);
+    }
+}
+
+.doveup {
+    bottom: 2.95rem;
+    animation: doveup 10000ms linear forwards;
+    z-index: 37;
+}
+
+@keyframes doveup {
+    0% {
+        bottom: 2.95rem;
+
+    }
+
+    4% {
+        bottom: 2.05rem;
+    }
+
+    100% {
+        bottom: 4.85rem;
+    }
+}
+
+/* 鸽子运动动画 */
+.dovemove {
+    animation: dovemove1 2000ms linear,
+        dovemove2 1287ms 2000ms linear,
+        dovemove3 3171ms 3287ms linear,
+        dovemove4 1850ms 6458ms linear forwards;
+}
+
+.dovemove1 {
+    animation: dovemove5 678ms linear,
+        dovemove6 3991ms 678ms linear forwards;
+}
+
+.dovemove2 {
+    animation: dovemove7 1690ms linear,
+        dovemove8 1254ms 1690ms linear,
+        dovemove9 2030ms 2944ms linear forwards;
+}
+
+.dovemove3 {
+    animation: dovemove10 2201ms linear,
+        dovemove11 1220ms 2201ms linear forwards;
+}
+
+@keyframes dovemove1 {
+    from {
+        left: 3.29rem;
+        bottom: .22rem;
+    }
+
+    to {
+        left: 1.8rem;
+        bottom: 1rem;
+    }
+}
+
+@keyframes dovemove2 {
+    from {
+        left: 1.8rem;
+        bottom: 1rem;
+    }
+
+    to {
+        left: 2.7rem;
+        bottom: 1.6rem;
+    }
+}
+
+@keyframes dovemove3 {
+    from {
+        left: 2.7rem;
+        bottom: 1.6rem;
+    }
+
+    to {
+        left: 0.4rem;
+        bottom: 2.95rem;
+    }
+}
+
+@keyframes dovemove4 {
+    from {
+        left: 0.4rem;
+        bottom: 2.95rem;
+    }
+
+    to {
+        left: 1.5rem;
+        bottom: 4.05rem;
+    }
+}
+
+@keyframes dovemove5 {
+    from {
+        left: 1.5rem;
+        bottom: 4.05rem;
+    }
+
+    to {
+        left: 1.05rem;
+        bottom: 4.4rem;
+    }
+}
+
+@keyframes dovemove6 {
+    from {
+        left: 1.05rem;
+        bottom: 4.4rem;
+    }
+
+    to {
+        left: 4rem;
+        bottom: 6rem;
+    }
+}
+
+@keyframes dovemove7 {
+    from {
+        left: 4rem;
+        bottom: 6rem;
+    }
+
+    to {
+        left: 4.9rem;
+        bottom: 4.9rem;
+    }
+}
+
+@keyframes dovemove8 {
+    from {
+        left: 4.9rem;
+        bottom: 4.9rem;
+    }
+
+    to {
+        left: 4rem;
+        bottom: 4.35rem;
+    }
+}
+
+@keyframes dovemove9 {
+    from {
+        left: 4rem;
+        bottom: 4.35rem;
+    }
+
+    to {
+        left: 5.45rem;
+        bottom: 3.45rem;
+    }
+}
+
+@keyframes dovemove10 {
+    from {
+        left: 5.45rem;
+        bottom: 3.45rem;
+    }
+
+    to {
+        left: 4rem;
+        bottom: 2.3rem;
+    }
+}
+
+@keyframes dovemove11 {
+    from {
+        left: 4rem;
+        bottom: 2.3rem;
+    }
+
+    to {
+        left: 3.25rem;
+        bottom: 3rem;
+    }
+}
+
+
+
+/* 梯子上升动画 */
+.ladder,
+.secondBatch,
+.threeBatch,
+.fourBatch {
+    transform: translateY(8rem);
+}
+
+.laddermove {
+    animation: laddermove 1500ms forwards;
+}
+
+@keyframes laddermove {
+    0% {
+        transform: translateY(8rem);
+    }
+
+    80% {
+        transform: translateY(-.2rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 梯子12上升的动画 */
+.ladder12_Move {
+    animation: ladder12_Move 10000ms linear forwards;
+}
+
+@keyframes ladder12_Move {
+    0% {
+        transform: translateY(0rem);
+        bottom: -1.81rem;
+    }
+
+    4% {
+        transform: translateY(0rem);
+        bottom: -2.71rem;
+    }
+
+    100% {
+        bottom: 0;
+        transform: translateY(0)
+    }
+}
+
+.firstBatch {
+    transform: translateY(8rem);
+    animation: laddermove 2000ms forwards;
+}
+
+/* 鸽子瞬移位置*/
+.Teleportation1 {
+    bottom: 4.05rem;
+    left: 1.5rem;
+}
+
+.Teleportation2 {
+    bottom: 6rem;
+    left: 4rem;
+}
+
+.Teleportation3 {
+    left: 5.45rem;
+    bottom: 3.45rem;
+}
+
+/* 第二部分隐藏 */
+.two {
+    height: 100%;
+    display: none;
+}
+
+
+.clouds_z15 {
+    height: 2.4rem;
+    background-image: url(../image/z15.png), linear-gradient(to top, #b9d9e4 10%, transparent 30%);
+    z-index: 41;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.clouds_29 {
+    z-index: 18;
+}
+
+
+
+.ladder_02_02 {
+    left: 2.585rem;
+    bottom: -3.17698rem;
+    z-index: 44;
+}
+
+.ladder_02_03 {
+    bottom: -2.89rem;
+    left: 2.09rem;
+    z-index: 43;
+}
+
+.ladder_04 {
+    width: 2rem;
+    height: 5.34rem;
+    position: absolute;
+}
+
+.ladder_04_1 {
+    left: 1.60rem;
+    bottom: -3.333rem;
+    z-index: 42;
+}
+
+.ladder_07 {
+    width: 1.76rem;
+    height: 3.02rem;
+    position: absolute;
+}
+
+.ladder_07_1 {
+    bottom: -0.30rem;
+    left: 1.352rem;
+    z-index: 40;
+}
+
+.ladder_07_2 {
+    left: .115rem;
+    bottom: .417rem;
+    z-index: 39;
+}
+
+.lader_08 {
+    width: 1rem;
+    height: 4.21rem;
+    position: absolute;
+    left: .85rem;
+    bottom: -.03rem;
+    z-index: 38;
+}
+
+.ladder_09 {
+    width: 1rem;
+    height: 3.75rem;
+    position: absolute;
+
+}
+
+.ladder_09_09 {
+    left: 1.35rem;
+    bottom: .72rem;
+    z-index: 37;
+}
+
+.ladder_10 {
+    width: 1.26rem;
+    height: 3.02rem;
+    position: absolute;
+    left: 3.59rem;
+    bottom: .16rem;
+    z-index: 38;
+}
+
+.ladder_11 {
+    width: 1.26rem;
+    height: 3.45rem;
+    position: absolute;
+
+}
+
+.ladder_11_11 {
+    left: 4.32rem;
+    bottom: -.28rem;
+    z-index: 37;
+}
+
+.ladder_12 {
+    width: 1rem;
+    height: 5.27rem;
+    position: absolute;
+    left: 3.10rem;
+    bottom: -1.81rem;
+    z-index: 35;
+}
+
+.ladder_13 {
+    width: .76rem;
+    height: .8rem;
+    position: absolute;
+    left: 5.065rem;
+    bottom: 2.82rem;
+    z-index: 36;
+}
+
+.ladder_14 {
+    width: 1rem;
+    height: 3.2rem;
+    position: absolute;
+    bottom: -.45rem;
+    right: -.39rem;
+    z-index: 33;
+}
+
+.ladder_15 {
+    bottom: .153rem;
+    left: 5.32rem;
+    z-index: 32;
+}
+
+.goldcoin {
+    width: .6rem;
+    height: .84rem;
+    position: absolute;
+    right: .53rem;
+    bottom: 4.26rem;
+    z-index: 31;
+}
+
+.ladder_17 {
+    width: 1.26rem;
+    height: 4.21rem;
+    position: absolute;
+    left: 5.815rem;
+    bottom: .26rem;
+    z-index: 30;
+}
+
+.windmill {
+    width: 1.63rem;
+    height: 4.61rem;
+    overflow: hidden;
+    position: absolute;
+    left: 2.12rem;
+    bottom: .65rem;
+    z-index: 29;
+
+}
+
+.windmill-box {
+    width: 4.89rem;
+    height: 100%;
+    animation: windmillMove 400ms steps(3) infinite;
+}
+
+.windmill img {
+    width: 1.63rem;
+    height: 4.61rem;
+    float: left;
+
+}
+
+@keyframes windmillMove {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(-4.89rem);
+    }
+}
+
+.ladder_11_19 {
+    left: .854rem;
+    bottom: 1.46rem;
+    z-index: 28;
+}
+
+.phone {
+    width: .68rem;
+    height: .66rem;
+    position: absolute;
+    left: .55rem;
+    bottom: 5.28rem;
+    z-index: 28;
+}
+
+.ladder_21 {
+    width: 1rem;
+    height: 3.46rem;
+    position: absolute;
+    z-index: 26;
+}
+
+.ladder_21_21 {
+    left: .375rem;
+    bottom: 1.88rem;
+    z-index: 27;
+}
+
+.ladder_02 {
+    width: 1rem;
+    height: 4.04rem;
+    position: absolute;
+
+}
+
+.ladder_22 {
+    left: 4.82rem;
+    bottom: .15rem;
+    z-index: 26;
+}
+
+.ladder_23 {
+    left: 4.325rem;
+    bottom: .437rem;
+    z-index: 25;
+}
+
+.ladder_24 {
+    left: 3.83rem;
+    bottom: -0.009rem;
+    z-index: 24;
+}
+
+.ladder_11_25 {
+    left: 1.592rem;
+    bottom: 1.887rem;
+    z-index: 23;
+}
+
+.ladder_11_26 {
+    left: 2.33rem;
+    bottom: 2.3122rem;
+    z-index: 22;
+}
+
+.ladder_11_27 {
+    left: 3.065rem;
+    bottom: 2.74rem;
+    z-index: 21;
+}
+
+.ladder_28 {
+    width: 1rem;
+    height: 1.45rem;
+    position: absolute;
+    left: 4.323rem;
+    bottom: 4.75rem;
+    z-index: 20;
+}
+
+.ladder_09_30 {
+    left: 3.823rem;
+    bottom: 2.73rem;
+    z-index: 19;
+}
+
+.lou_z31 {
+    width: 2.5rem;
+    height: 5.71rem;
+    position: absolute;
+    left: 1.1rem;
+    bottom: 2.07rem;
+    z-index: 17;
+}
+
+.wifi {
+    width: .82rem;
+    height: .73rem;
+    position: absolute;
+    left: 4.47rem;
+    bottom: 6.92rem;
+    z-index: 16;
+}
+
+.ladder_21_33 {
+    right: 1.85rem;
+    bottom: 3.61rem;
+    z-index: 15;
+}
+
+.ladder_34 {
+    width: 1.5rem;
+    height: 6.34rem;
+    position: absolute;
+    right: .12rem;
+    bottom: 1.51rem;
+}
+
+.clouds_z35 {
+    width: 100%;
+    height: 4.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+.upMove {
+    animation: upMove 1000ms infinite linear alternate;
+}
+
+@keyframes upMove {
+    0% {
+        transform: translateY(.1rem);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-.1rem);
+    }
+}
+
+.three {
+    display: none;
+}
+
+.three_title {
+    font-size: .3rem;
+    color: #ffffed;
+    position: absolute;
+    top: 0.8rem;
+    left: 1.14rem;
+}
+
+.button {
+    width: 2rem;
+    height: .6rem;
+    border: .01rem solid white;
+    border-radius: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.button1 {
+    right: .6rem;
+    top: .72rem;
+}
+
+.icon {
+    width: .18rem;
+    height: .20rem;
+    margin-right: .27rem;
+}
+
+.button_text {
+    color: #ffffff;
+    font-size: .24rem;
+
+}
+
+.fraction {
+    font-size: .3rem;
+    color: #ffffed;
+    position: absolute;
+    top: 1.52rem;
+    left: 1.14rem;
+}
+
+.divide {
+    font-size: .5rem;
+    font-weight: bold;
+}
+
+.three_text {
+    font-size: .24rem;
+    position: absolute;
+    left: 1.14rem;
+    top: 2.58rem;
+    color: #ffffff;
+}
+
+.button2 {
+    left: .7rem;
+    bottom: .6rem;
+}
+
+.button3 {
+    right: .7rem;
+    bottom: .6rem;
+}
+
+.heavenlyBody1 {
+    width: 1.65rem;
+    height: 1.64rem;
+    background-image: url(../image/star_box3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: .43rem;
+    top: 5.81rem;
+    opacity: 0;
+    transform: translateX(-200px) rotate(180deg);
+
+}
+
+.heavenlyBody2 {
+    width: 2.1rem;
+    height: 2.08rem;
+    background-image: url(../image/star_box1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 2.58rem;
+    top: 3.9rem;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.heavenlyBody3 {
+    width: 1.82rem;
+    height: 1.82rem;
+    background-image: url(../image/star_box2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: .25rem;
+    top: 5.12rem;
+    opacity: 0;
+    transform: translateX(200px) rotate(-180deg);
+}
+
+.heavenlyBodyMove1 {
+    animation: heavenlyBodyMove1 2000ms linear forwards;
+}
+
+.heavenlyBodyMove2 {
+    animation: heavenlyBodyMove2 2000ms linear forwards;
+}
+
+.heavenlyBodyMove3 {
+    animation: heavenlyBodyMove3 2000ms linear forwards;
+}
+
+@keyframes heavenlyBodyMove1 {
+    from {
+        opacity: 0;
+        transform: translateX(-200px) rotate(180deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px) rotate(0deg);
+    }
+}
+
+@keyframes heavenlyBodyMove2 {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes heavenlyBodyMove3 {
+    from {
+        opacity: 0;
+        transform: translateX(200px) rotate(-180deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px) rotate(0deg);
+    }
+}
+
+.gz {
+    width: .7rem;
+    height: 1rem;
+    position: absolute;
+}
+
+.gz1 {
+    left: .5rem;
+    top: -.5rem;
+}
+
+.gz2 {
+    left: .75rem;
+    top: -.5rem;
+}
+
+.gz3 {
+    left: .6rem;
+    top: -.5rem;
+}
+
+.telephoneNumber {
+    width: 1.86rem;
+    height: .46rem;
+    border: .03rem solid rgb(255, 255, 255, .3);
+    border-radius: .09rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .18rem;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(0, 0, 0, .2);
+}
+
+.down_box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.downMove {
+    animation: downMove 4000ms linear forwards;
+}
+
+@keyframes downMove {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 8rem;
+    }
+}
